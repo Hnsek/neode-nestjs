@@ -19,7 +19,7 @@ export interface IConnection {
 
 // Just handle warn on terminal
 const handleWarn = (schema: string) =>
-	new Logger('NeodeModule', isTimestamped).warn(
+	new Logger('NeodeModule', {timestamp: isTimestamped}).warn(
 		`Could not install schema ${schema}. Already installed ?`,
 	);
 
